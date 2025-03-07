@@ -1,236 +1,206 @@
---[=[
- d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
-88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
-88      88    88    88            odD'      88      88    88 88ooo88 
-88  ooo 88    88    88          .88'        88      88    88 88~~~88 
-88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
- Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
-]=]
+-- Gui to Lua
+-- Version: 3.2
 
--- Instances: 16 | Scripts: 3 | Modules: 0 | Tags: 0
-local G2L = {};
+-- Instances:
 
--- StarterGui.ScreenGui
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+local ScreenGui = Instance.new("ScreenGui")
+local Controls = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local InfiniteYield = Instance.new("ImageButton")
+local GenesisKrystalDance = Instance.new("TextButton")
+local GenesisLightingCannon = Instance.new("TextButton")
+local GenesisNeko = Instance.new("TextButton")
+local GenesisAK47 = Instance.new("TextButton")
+local PatchmaHub = Instance.new("TextButton")
+local PShade = Instance.new("TextButton")
+local UNC = Instance.new("TextButton")
+local noscript = Instance.new("TextButton")
+local Open = Instance.new("ImageButton")
 
+--Properties:
 
--- StarterGui.ScreenGui.Controls
-G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["Visible"] = false;
-G2L["2"]["BorderSizePixel"] = 2;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2"]["Size"] = UDim2.new(0, 656, 0, 400);
-G2L["2"]["Position"] = UDim2.new(0.27928, 0, 0.24005, 0);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Name"] = [[Controls]];
-G2L["2"]["BackgroundTransparency"] = 0.7;
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
+Controls.Name = "Controls"
+Controls.Parent = ScreenGui
+Controls.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Controls.BackgroundTransparency = 0.700
+Controls.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Controls.BorderSizePixel = 2
+Controls.Position = UDim2.new(0.27928409, 0, 0.240047604, 0)
+Controls.Size = UDim2.new(0, 656, 0, 400)
+Controls.Visible = false
 
--- StarterGui.ScreenGui.Controls.Close
-G2L["3"] = Instance.new("TextButton", G2L["2"]);
-G2L["3"]["TextWrapped"] = true;
-G2L["3"]["TextStrokeTransparency"] = 0;
-G2L["3"]["BorderSizePixel"] = 3;
-G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["TextSize"] = 14;
-G2L["3"]["TextScaled"] = true;
-G2L["3"]["BackgroundColor3"] = Color3.fromRGB(178, 0, 3);
-G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3"]["Size"] = UDim2.new(0, 35, 0, 35);
-G2L["3"]["Name"] = [[Close]];
-G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["Text"] = [[X]];
-G2L["3"]["Position"] = UDim2.new(0.9501, 0, -0.04135, 0);
+Close.Name = "Close"
+Close.Parent = Controls
+Close.BackgroundColor3 = Color3.fromRGB(177, 0, 2)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 3
+Close.Position = UDim2.new(0.950099945, 0, -0.0413533822, 0)
+Close.Size = UDim2.new(0, 35, 0, 35)
+Close.Font = Enum.Font.FredokaOne
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextStrokeTransparency = 0.000
+Close.TextWrapped = true
 
+InfiniteYield.Name = "InfiniteYield"
+InfiniteYield.Parent = Controls
+InfiniteYield.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYield.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfiniteYield.BorderSizePixel = 0
+InfiniteYield.Position = UDim2.new(0.0198170729, 0, 0.023323616, 0)
+InfiniteYield.Size = UDim2.new(0, 100, 0, 100)
+InfiniteYield.Image = "http://www.roblox.com/asset/?id=106720271421010"
 
--- StarterGui.ScreenGui.Controls.Close.LocalScript
-G2L["4"] = Instance.new("LocalScript", G2L["3"]);
+GenesisKrystalDance.Name = "GenesisKrystalDance"
+GenesisKrystalDance.Parent = Controls
+GenesisKrystalDance.BackgroundColor3 = Color3.fromRGB(255, 252, 249)
+GenesisKrystalDance.BackgroundTransparency = 0.250
+GenesisKrystalDance.BorderColor3 = Color3.fromRGB(255, 58, 44)
+GenesisKrystalDance.BorderSizePixel = 0
+GenesisKrystalDance.Position = UDim2.new(0.192073166, 0, 0.023323616, 0)
+GenesisKrystalDance.Size = UDim2.new(0, 100, 0, 100)
+GenesisKrystalDance.Font = Enum.Font.SourceSans
+GenesisKrystalDance.Text = "Genesis KrystalDance"
+GenesisKrystalDance.TextColor3 = Color3.fromRGB(0, 0, 0)
+GenesisKrystalDance.TextScaled = true
+GenesisKrystalDance.TextSize = 26.000
+GenesisKrystalDance.TextWrapped = true
 
+GenesisLightingCannon.Name = "GenesisLightingCannon"
+GenesisLightingCannon.Parent = Controls
+GenesisLightingCannon.BackgroundColor3 = Color3.fromRGB(255, 252, 249)
+GenesisLightingCannon.BackgroundTransparency = 0.250
+GenesisLightingCannon.BorderColor3 = Color3.fromRGB(255, 58, 44)
+GenesisLightingCannon.BorderSizePixel = 0
+GenesisLightingCannon.Position = UDim2.new(0.365853667, 0, 0.023323616, 0)
+GenesisLightingCannon.Size = UDim2.new(0, 100, 0, 100)
+GenesisLightingCannon.Font = Enum.Font.SourceSans
+GenesisLightingCannon.Text = "Genesis LightingCannon"
+GenesisLightingCannon.TextColor3 = Color3.fromRGB(0, 0, 0)
+GenesisLightingCannon.TextScaled = true
+GenesisLightingCannon.TextSize = 26.000
+GenesisLightingCannon.TextWrapped = true
 
+GenesisNeko.Name = "GenesisNeko"
+GenesisNeko.Parent = Controls
+GenesisNeko.BackgroundColor3 = Color3.fromRGB(255, 252, 249)
+GenesisNeko.BackgroundTransparency = 0.250
+GenesisNeko.BorderColor3 = Color3.fromRGB(255, 58, 44)
+GenesisNeko.BorderSizePixel = 0
+GenesisNeko.Position = UDim2.new(0.0198170729, 0, 0.352769673, 0)
+GenesisNeko.Size = UDim2.new(0, 100, 0, 100)
+GenesisNeko.Font = Enum.Font.SourceSans
+GenesisNeko.Text = "Genesis Neko"
+GenesisNeko.TextColor3 = Color3.fromRGB(0, 0, 0)
+GenesisNeko.TextScaled = true
+GenesisNeko.TextSize = 26.000
+GenesisNeko.TextWrapped = true
 
--- StarterGui.ScreenGui.Controls.InfiniteYield
-G2L["5"] = Instance.new("ImageButton", G2L["2"]);
-G2L["5"]["BorderSizePixel"] = 0;
-G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5"]["Image"] = [[http://www.roblox.com/asset/?id=106720271421010]];
-G2L["5"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["5"]["HoverImage"] = [[http://www.roblox.com/asset/?id=106720271421010]];
-G2L["5"]["Name"] = [[InfiniteYield]];
-G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5"]["Position"] = UDim2.new(0.01982, 0, 0.02332, 0);
+GenesisAK47.Name = "GenesisAK47"
+GenesisAK47.Parent = Controls
+GenesisAK47.BackgroundColor3 = Color3.fromRGB(255, 252, 249)
+GenesisAK47.BackgroundTransparency = 0.250
+GenesisAK47.BorderColor3 = Color3.fromRGB(255, 58, 44)
+GenesisAK47.BorderSizePixel = 0
+GenesisAK47.Position = UDim2.new(0.192073166, 0, 0.352769673, 0)
+GenesisAK47.Size = UDim2.new(0, 100, 0, 100)
+GenesisAK47.Font = Enum.Font.SourceSans
+GenesisAK47.Text = "Genesis AK47"
+GenesisAK47.TextColor3 = Color3.fromRGB(0, 0, 0)
+GenesisAK47.TextScaled = true
+GenesisAK47.TextSize = 26.000
+GenesisAK47.TextWrapped = true
 
+PatchmaHub.Name = "PatchmaHub"
+PatchmaHub.Parent = Controls
+PatchmaHub.BackgroundColor3 = Color3.fromRGB(255, 252, 249)
+PatchmaHub.BackgroundTransparency = 0.250
+PatchmaHub.BorderColor3 = Color3.fromRGB(255, 58, 44)
+PatchmaHub.BorderSizePixel = 0
+PatchmaHub.Position = UDim2.new(0.365853667, 0, 0.352769673, 0)
+PatchmaHub.Size = UDim2.new(0, 100, 0, 100)
+PatchmaHub.Font = Enum.Font.SourceSans
+PatchmaHub.Text = "PatchmaHub"
+PatchmaHub.TextColor3 = Color3.fromRGB(0, 0, 0)
+PatchmaHub.TextScaled = true
+PatchmaHub.TextSize = 26.000
+PatchmaHub.TextWrapped = true
 
--- StarterGui.ScreenGui.Controls.GenesisKrystalDance
-G2L["6"] = Instance.new("TextButton", G2L["2"]);
-G2L["6"]["TextWrapped"] = true;
-G2L["6"]["BorderSizePixel"] = 0;
-G2L["6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6"]["TextSize"] = 26;
-G2L["6"]["TextScaled"] = true;
-G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 253, 250);
-G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["6"]["BackgroundTransparency"] = 0.25;
-G2L["6"]["Name"] = [[GenesisKrystalDance]];
-G2L["6"]["BorderColor3"] = Color3.fromRGB(255, 59, 45);
-G2L["6"]["Text"] = [[Genesis KrystalDance]];
-G2L["6"]["Position"] = UDim2.new(0.19207, 0, 0.02332, 0);
+PShade.Name = "PShade"
+PShade.Parent = Controls
+PShade.BackgroundColor3 = Color3.fromRGB(255, 252, 249)
+PShade.BackgroundTransparency = 0.250
+PShade.BorderColor3 = Color3.fromRGB(255, 58, 44)
+PShade.BorderSizePixel = 0
+PShade.Position = UDim2.new(0.0198170729, 0, 0.692769647, 0)
+PShade.Size = UDim2.new(0, 100, 0, 100)
+PShade.Font = Enum.Font.SourceSans
+PShade.Text = "PShade"
+PShade.TextColor3 = Color3.fromRGB(0, 0, 0)
+PShade.TextScaled = true
+PShade.TextSize = 26.000
+PShade.TextWrapped = true
 
+UNC.Name = "UNC"
+UNC.Parent = Controls
+UNC.BackgroundColor3 = Color3.fromRGB(255, 252, 249)
+UNC.BackgroundTransparency = 0.250
+UNC.BorderColor3 = Color3.fromRGB(255, 58, 44)
+UNC.BorderSizePixel = 0
+UNC.Position = UDim2.new(0.192073166, 0, 0.692769647, 0)
+UNC.Size = UDim2.new(0, 100, 0, 100)
+UNC.Font = Enum.Font.SourceSans
+UNC.Text = "UNC"
+UNC.TextColor3 = Color3.fromRGB(0, 0, 0)
+UNC.TextScaled = true
+UNC.TextSize = 26.000
+UNC.TextWrapped = true
 
--- StarterGui.ScreenGui.Controls.GenesisLightingCannon
-G2L["7"] = Instance.new("TextButton", G2L["2"]);
-G2L["7"]["TextWrapped"] = true;
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["TextSize"] = 26;
-G2L["7"]["TextScaled"] = true;
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 253, 250);
-G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["7"]["BackgroundTransparency"] = 0.25;
-G2L["7"]["Name"] = [[GenesisLightingCannon]];
-G2L["7"]["BorderColor3"] = Color3.fromRGB(255, 59, 45);
-G2L["7"]["Text"] = [[Genesis LightingCannon]];
-G2L["7"]["Position"] = UDim2.new(0.36585, 0, 0.02332, 0);
+noscript.Name = "nil"
+noscript.Parent = Controls
+noscript.BackgroundColor3 = Color3.fromRGB(255, 252, 249)
+noscript.BackgroundTransparency = 0.250
+noscript.BorderColor3 = Color3.fromRGB(255, 58, 44)
+noscript.BorderSizePixel = 0
+noscript.Position = UDim2.new(0.365853667, 0, 0.692769647, 0)
+noscript.Size = UDim2.new(0, 100, 0, 100)
+noscript.Font = Enum.Font.SourceSans
+noscript.Text = "nil"
+noscript.TextColor3 = Color3.fromRGB(0, 0, 0)
+noscript.TextScaled = true
+noscript.TextSize = 26.000
+noscript.TextWrapped = true
 
+Open.Name = "Open"
+Open.Parent = ScreenGui
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open.BackgroundTransparency = 1.000
+Open.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0.898928463, 0, 0.425973773, 0)
+Open.Size = UDim2.new(0, 100, 0, 101)
+Open.Image = "http://www.roblox.com/asset/?id=10486998741"
 
--- StarterGui.ScreenGui.Controls.GenesisNeko
-G2L["8"] = Instance.new("TextButton", G2L["2"]);
-G2L["8"]["TextWrapped"] = true;
-G2L["8"]["BorderSizePixel"] = 0;
-G2L["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["TextSize"] = 26;
-G2L["8"]["TextScaled"] = true;
-G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 253, 250);
-G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["8"]["BackgroundTransparency"] = 0.25;
-G2L["8"]["Name"] = [[GenesisNeko]];
-G2L["8"]["BorderColor3"] = Color3.fromRGB(255, 59, 45);
-G2L["8"]["Text"] = [[Genesis Neko]];
-G2L["8"]["Position"] = UDim2.new(0.01982, 0, 0.35277, 0);
+-- Scripts:
 
+local function VPNAPCV_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
 
--- StarterGui.ScreenGui.Controls.GenesisAK47
-G2L["9"] = Instance.new("TextButton", G2L["2"]);
-G2L["9"]["TextWrapped"] = true;
-G2L["9"]["BorderSizePixel"] = 0;
-G2L["9"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9"]["TextSize"] = 26;
-G2L["9"]["TextScaled"] = true;
-G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 253, 250);
-G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["9"]["BackgroundTransparency"] = 0.25;
-G2L["9"]["Name"] = [[GenesisAK47]];
-G2L["9"]["BorderColor3"] = Color3.fromRGB(255, 59, 45);
-G2L["9"]["Text"] = [[Genesis AK47]];
-G2L["9"]["Position"] = UDim2.new(0.19207, 0, 0.35277, 0);
-
-
--- StarterGui.ScreenGui.Controls.PatchmaHub
-G2L["a"] = Instance.new("TextButton", G2L["2"]);
-G2L["a"]["TextWrapped"] = true;
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["TextSize"] = 26;
-G2L["a"]["TextScaled"] = true;
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 253, 250);
-G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["a"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["a"]["BackgroundTransparency"] = 0.25;
-G2L["a"]["Name"] = [[PatchmaHub]];
-G2L["a"]["BorderColor3"] = Color3.fromRGB(255, 59, 45);
-G2L["a"]["Text"] = [[PatchmaHub]];
-G2L["a"]["Position"] = UDim2.new(0.36585, 0, 0.35277, 0);
-
-
--- StarterGui.ScreenGui.Controls.PShade
-G2L["b"] = Instance.new("TextButton", G2L["2"]);
-G2L["b"]["TextWrapped"] = true;
-G2L["b"]["BorderSizePixel"] = 0;
-G2L["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["TextSize"] = 26;
-G2L["b"]["TextScaled"] = true;
-G2L["b"]["BackgroundColor3"] = Color3.fromRGB(255, 253, 250);
-G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["b"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["b"]["BackgroundTransparency"] = 0.25;
-G2L["b"]["Name"] = [[PShade]];
-G2L["b"]["BorderColor3"] = Color3.fromRGB(255, 59, 45);
-G2L["b"]["Text"] = [[PShade]];
-G2L["b"]["Position"] = UDim2.new(0.01982, 0, 0.69277, 0);
-
-
--- StarterGui.ScreenGui.Controls.UNC
-G2L["c"] = Instance.new("TextButton", G2L["2"]);
-G2L["c"]["TextWrapped"] = true;
-G2L["c"]["BorderSizePixel"] = 0;
-G2L["c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c"]["TextSize"] = 26;
-G2L["c"]["TextScaled"] = true;
-G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 253, 250);
-G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["c"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["c"]["BackgroundTransparency"] = 0.25;
-G2L["c"]["Name"] = [[UNC]];
-G2L["c"]["BorderColor3"] = Color3.fromRGB(255, 59, 45);
-G2L["c"]["Text"] = [[UNC]];
-G2L["c"]["Position"] = UDim2.new(0.19207, 0, 0.69277, 0);
-
-
--- StarterGui.ScreenGui.Controls.nil
-G2L["d"] = Instance.new("TextButton", G2L["2"]);
-G2L["d"]["TextWrapped"] = true;
-G2L["d"]["BorderSizePixel"] = 0;
-G2L["d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d"]["TextSize"] = 26;
-G2L["d"]["TextScaled"] = true;
-G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 253, 250);
-G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["d"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["d"]["BackgroundTransparency"] = 0.25;
-G2L["d"]["Name"] = [[nil]];
-G2L["d"]["BorderColor3"] = Color3.fromRGB(255, 59, 45);
-G2L["d"]["Text"] = [[nil]];
-G2L["d"]["Position"] = UDim2.new(0.36585, 0, 0.69277, 0);
-
-
--- StarterGui.ScreenGui.Controls.Execution
-G2L["e"] = Instance.new("LocalScript", G2L["2"]);
-G2L["e"]["Name"] = [[Execution]];
-
-
--- StarterGui.ScreenGui.Open
-G2L["f"] = Instance.new("ImageButton", G2L["1"]);
-G2L["f"]["BorderSizePixel"] = 0;
-G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["Image"] = [[http://www.roblox.com/asset/?id=10486998741]];
-G2L["f"]["Size"] = UDim2.new(0, 100, 0, 101);
-G2L["f"]["BackgroundTransparency"] = 1;
-G2L["f"]["Name"] = [[Open]];
-G2L["f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["f"]["Position"] = UDim2.new(0.89893, 0, 0.42597, 0);
-
-
--- StarterGui.ScreenGui.Open.LocalScript
-G2L["10"] = Instance.new("LocalScript", G2L["f"]);
-
-
-
--- StarterGui.ScreenGui.Controls.Close.LocalScript
-local function C_4()
-local script = G2L["4"];
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 	
-end;
-task.spawn(C_4);
--- StarterGui.ScreenGui.Controls.Execution
-local function C_e()
-local script = G2L["e"];
+end
+coroutine.wrap(VPNAPCV_fake_script)()
+local function UCMNKTE_fake_script() -- Controls.Execution 
+	local script = Instance.new('LocalScript', Controls)
+
 	script.Parent.Parent.ResetOnSpawn = false
 	local fling = true --toggle fling
 	local allowshiftlock = true --adds shiftlock to patchma rig
@@ -351,33 +321,16 @@ local script = G2L["e"];
 		loadstring(game:Httpget("https://raw.githubusercontent.com/NikscCheat/PatchmaV43/refs/heads/main/message%20(1).txt"))()
 	end)
 	script.Parent.PShade.MouseButton1Click:Connect(function()
-		getgenv().RTX_Name = "rtxnamehere" --not really needed if you don't need it
-	 	--[[
-		-examples auto loads features :
-	  	-getgenv().RTX_Name = "Midday lite" 
-	 	-Morning
-		-Afternoon
-		-Midday
-		-Evening
-		-Night
-		-Midnight
-	 	-Morning lite
-		-Midday lite
-		-Afternoon lite
-		-Evening lite
-		-Night lite
-		-Midnight lite
-	 	]]
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/randomstring0/pshade-ultimate/refs/heads/main/src/cd.lua'))()
 	end)
 	script.Parent.UNC.MouseButton1Click:Connect(function()
 		loadstring(game:Httpget("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/refs/heads/main/UNCCheckEnv.lua"))()
 	end)
-end;
-task.spawn(C_e);
--- StarterGui.ScreenGui.Open.LocalScript
-local function C_10()
-local script = G2L["10"];
+end
+coroutine.wrap(UCMNKTE_fake_script)()
+local function BMWDBCB_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
+
 	local frame = script.Parent.Parent.Controls  -- change “Test” to the name of the frane
 	local open = false
 	
@@ -387,7 +340,6 @@ local script = G2L["10"];
 		end
 	end)
 	
-end;
-task.spawn(C_10);
+end
+coroutine.wrap(BMWDBCB_fake_script)()
 
-return G2L["1"], require;
