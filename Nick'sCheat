@@ -231,6 +231,7 @@ task.spawn(C_4);
 -- StarterGui.ScreenGui.Controls.Execution
 local function C_e()
 local script = G2L["e"];
+	script.Parent.Parent.ResetOnSpawn = false
 	local fling = true --toggle fling
 	local allowshiftlock = true --adds shiftlock to patchma rig
 	local ctrltp = true --adds control click tp
@@ -369,7 +370,7 @@ local script = G2L["e"];
 	 	]]
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/NikscCheat/PshadeReborn/refs/heads/main/PshadeReborn'),true))()
 	end)
-	script.Parent.UNC.MouseButton1Click:Connect(function()
+	script.Parent.PatchmaHub.MouseButton1Click:Connect(function()
 		loadstring(game:Httpget("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/refs/heads/main/UNCCheckEnv.lua"))()
 	end)
 end;
