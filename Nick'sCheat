@@ -368,7 +368,7 @@ local script = G2L["e"];
 		-Night lite
 		-Midnight lite
 	 	]]
-		loadstring(game:HttpGet(('https://raw.githubusercontent.com/NikscCheat/PshadeReborn/refs/heads/main/PshadeReborn'),true))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/randomstring0/pshade-ultimate/refs/heads/main/src/cd.lua'))()
 	end)
 	script.Parent.UNC.MouseButton1Click:Connect(function()
 		loadstring(game:Httpget("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/refs/heads/main/UNCCheckEnv.lua"))()
