@@ -369,7 +369,7 @@ local script = G2L["e"];
 	 	]]
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/NikscCheat/PshadeReborn/refs/heads/main/PshadeReborn'),true))()
 	end)
-	script.Parent.PatchmaHub.MouseButton1Click:Connect(function()
+	script.Parent.UNC.MouseButton1Click:Connect(function()
 		loadstring(game:Httpget("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/refs/heads/main/UNCCheckEnv.lua"))()
 	end)
 end;
